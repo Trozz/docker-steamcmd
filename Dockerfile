@@ -6,6 +6,7 @@ RUN useradd \
       --create-home \
       --shell /bin/bash \
       steam \
+    && mkdir -p /opt/steamcmd/Steam/steamapps/common/ \
     && apt-get update \
     && apt-get install -y curl lib32gcc1 \
     && apt-get clean \
