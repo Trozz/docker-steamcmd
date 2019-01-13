@@ -8,6 +8,6 @@ docker run \
     -ti
     --name steamcmd \
     -e PUID=<UID> -e PGID=<GID> \
-    -v </path/to/steamapps>:/steamapps \
+    -v </path/to/steamapps>:/opt/steam/Steam/steamapps/common \
     trozz/steamcmd
 ```

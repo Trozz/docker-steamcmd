@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
-MAINTAINER Michael Leer <docker@trozzy.net>
+LABEL maintainer="docker@trozzy.net"
 
-# create user for steam
 RUN useradd \
       --home-dir /opt/steamcmd \
       --create-home \
@@ -17,6 +16,5 @@ RUN useradd \
 
 USER steam
 WORKDIR /opt/steamcmd
-
-# Execution vector
+VOLUME ["/opt/steam/Steam/steamapps/common"]
 ENTRYPOINT ["/opt/steamcmd/steamcmd.sh"]
